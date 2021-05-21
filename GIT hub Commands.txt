@@ -1,0 +1,11 @@
+//adding the files into the github
+git init
+git remote add origin https://github.com/pruthvi28994/Basics_Of_Coding_3.git
+git add . || git add -A
+git commit -m "coomit for coding"
+git push origin master  //adding to ur repositry
+
+//pulling 
+1. copy clone url
+2. get clone https://github.com/pruthvi28994/Basics_Of_Coding_3.git
+3. then commit it and upload it again
