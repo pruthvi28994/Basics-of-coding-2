@@ -1,0 +1,30 @@
+<html>
+<head>
+    
+    <title></title>
+    <script>
+        function Greeting() {
+            document.getElementById("result").innerHTML="Thank you for giving your input"
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <h1>Welcome to Online Survey </h1>
+        <b>1) How was your Experience ?</b>
+        <br />
+        <input type="radio" name="q1" />Good
+        <br />
+        <input type="radio" name="q1" />Bad
+        <hr />
+        <b>2) How was audio quality ?</b>
+        <br />
+        <input type="radio" name="q2" />Good
+        <br />
+        <input type="radio" name="q2" />Bad
+        <hr />
+        <div id="result">        </div>
+        <input type="button" value="Submit" onclick="Greeting()" />
+    </form>
+</body>
+</html>

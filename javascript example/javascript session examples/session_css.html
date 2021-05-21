@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3 Fundamental properties</title>
+
+    <style type="text/css">
+        h1 {
+             color: blue;
+             background-color: burlywood;
+             width: 100%;
+             text-shadow:2px 2px rgb(125, 146, 160);
+             transform: rotate3d(-30deg);
+             padding: 20px;
+        }
+
+        /* css using animation keyframes */
+        .keyframe{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            animation: divanimation 5s alternate infinite;
+        }
+        @keyframes divanimation{
+            from{background-color: red;}
+            to { background-color: rgb(123, 95, 202);
+                width: 200px;
+                height: 200px;
+                transform: rotate(-20deg);
+                margin-left: 100%;
+                }
+        }
+        /* div slide  */
+        .slideusingkeyframe{
+            align-self: center;
+            padding: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: salmon;
+            animation: slidekey 4s alternate infinite;
+        }
+        @keyframes slidekey{
+            0%{  background-color: seagreen; left: 0px; }
+            25%{  background-color: slateblue; left: 200px; }
+            50% { background-color: tomato; left:200px;}
+            75% {background-color: violet;left: 0px;}
+            100% { background-color: yellowgreen; left: 0px;}
+        }
+
+        p {
+             color: crimson;
+        }
+        a:link{ color: darkgoldenrod;}
+        a:visited { color: darkgreen;}
+        a:hover { color: darkgrey;}
+        a:active { color: darkmagenta;}
+    </style>
+</head>
+<body>
+        <h1 style="text-decoration:blink;">this is heading</h1><br/>
+        <p>this is paragraph</p><br/>
+        <a href="">this is link</a><br/>
+        <table align=center border=20px width=auto cellpadding=14px cellspacing=10px>
+            <caption>collapsed border</caption>
+            <tr><td>cell a</td><td>cell b</td></tr>
+            <tr><td>cell c</td><td>cell d</td></tr>
+        </table>
+
+        <br/><hr>
+        <div class="keyframe"></div>
+        <div class="slideusingkeyframe"></div>
+</body>
+</html>

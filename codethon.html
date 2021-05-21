@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+   <head><title>simple js quiz test</title>
+    <script type="text/javascript" src="codethon.js">
+    function validatequiz(){
+        var count =0;
+        var president=document.getElementsByName("president");
+        var capital=document.getElementsByName("capital");
+        if(president.value == '' || capital.value== ''){
+            alert("all fields are must");
+        }
+        if(president.value=="Rajendra prasad"){
+            count++;
+        }
+        if(capital.value=="delhi"){
+            count++;
+        }
+        document.getElementById("result").innerHTML="your Score"+count;
+    }
+    
+    </script>
+   </head>
+   <body>
+    <h1>Welcome to Online Quiz test</h1>
+    <hr>
+    <form onsubmit="validatequiz()">
+                <h2><b>Question 1:Who is the first president of india ?</b></h2>
+                <input type="radio" name="president" value="Rajendra prasad"/>Rajendra Prasad*<br/>
+                <input type="radio" name="president" value="Indra Ghandhi"/>Indra Ghandhi<br/>
+                <input type="radio" name="president" value="jawaharlal neharu"/>jawaharlal neharu<br/>
+                <input type="radio" name="president" value="abdhul kalam"/>abdhul kalam<br/>
+                <hr>
+                <h2><b>Question 2:capital of India ?</b></h2>
+                <input type="radio" name="capital" value="banglore"/>banglore<br/>
+                <input type="radio" name="capital" value="delhi"/>delhi<br/>
+                <input type="radio" name="capital" value="andhra"/>andhra<br/>
+                <input type="radio" name="capital" value="Mumbai"/>Mumbai<br/>
+                <hr>
+                <div id="result" style="color: red;"></div>
+                <input type="submit">
+    </form>
+    </div>
+</body>
+</html>
+

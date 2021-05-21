@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <title>session 1 example_1</title>
+</head>
+<body>
+    <form onsubmit="return gretting()">
+        <h1> welcome to capgemini</h1>
+        <hr/>
+        <b>how was the video qaulity</b><br>
+        <input type="radio" name="v"/>Good<br/>
+        <input type="radio" name="v"/>bad<br/>
+        <hr/>
+        <b>how was the audio quality</b><br/>
+        <input type="radio" name="a"/>Good<br/>
+        <input type="radio" name="a"/>bad<br/>
+
+        <div id="result" style="color: red;"></div>
+        <!-- <input type="submit" value="Submit" onclick="gretting()"/> -->
+        <input type="submit" value="submit"/>
+    </form>
+        <script>
+        function gretting(){
+            document.getElementById("result").innerHTML="Thank you for giving your input"
+        }
+    </script>
+</body>
+</html>

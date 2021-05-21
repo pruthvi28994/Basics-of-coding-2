@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student registration module</title>
+    <style type="text/css" >
+        input{
+            margin-bottom:10px;
+        }
+    
+    </style>
+    <script type="text/javascript">
+            function check_summary(){
+                var fname=document.studentregform.firstname.value;  //using name
+                var lname=document.getElementById('lastname').value; //using id
+                var age=document.getElementById('age').value;
+                if(!document.querySelector('input[name="Degree"]:checked')){
+                    alert("all fields are mandatorty");
+                }else {
+                        var degree=document.studentregform.Degree.value;                   // one way to select form radio elements
+                        var deg=document.querySelector('input[name="Degree"]:checked').value;   //using query selector
+                        document.getElementById('result').innerHTML="your details are:<br/>"+fname+" "+lname+"<br/>"+age+"<br/>"+degree+"<br>"+deg;
+           
+                    }
+            }
+            function check_year(){
+                var year=parseInt(document.getElementById('year').value)
+                if(year%400==0 || (year%4==0 && year%100!=0))
+                {
+                    alert(year+" is a leap year")
+                }
+                else 
+                    alert(year+" is not a leap year")
+            } 
+    </script>
+</head>
+<body>
+    <h1>student registration</h1>
+    <form name="studentregform">
+        <div>
+            <label for="First_name">First_name:<input type="text" name="firstname" id="firstname"/></label><br/>
+            <label for="Last_name">Last_name: <input type="text" name="lastname" id="lastname"></label><br/>
+            <label for="Age">Age: <input type="text" name="age" id="age"></label><br/>
+            <label for="Degree">
+                <input type="radio" name="Degree" id="M.Sc" value="M.Sc">M.Sc
+                <input type="radio" name="Degree" id="M.B.A" value="M.B.A">M.B.A
+            </label><br/>
+            <h5>Captacha</h5>
+            <label for="year">Year:</label><input type="text" name="year" id="year" onblur="check_year()"><br/>
+            <input type="button" value="Submit" onclick="check_summary()"/>
+    </form>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+  <head><title>Regular Expression Validation </title>
+<script>
+    function validate(){
+            var name=document.getElementById("username").value
+            var reg=/^[1][A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/
+            if(reg.test(name)){
+                    alert("USN is Valid "+name)
+            }else{
+                    alert("Invalid USN")
+            }
+       }
+
+
+</script></head>
+<body>
+      <label for="username">ENTER USN:<input type="text" name="username" id="username" onblur="validate()"/></label>
+      <input type="submit"/>
+
+</body>

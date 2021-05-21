@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS_Assisgnment</title>
+    <style>
+        #formv{ background-color: aqua;}
+    </style>
+    <script type="text/javascript">
+        function sumofeven(){
+            var sum=0;
+            for(var i=0;i<21;i++){
+                if(i%2==0){
+                    sum+=i;
+                }
+            }
+            document.getElementById('result1').innerHTML="Total:"+sum;
+        }
+        function validateuser(){
+            var User_name=document.getElementById('username').value;
+            if(User_name=='admin'){
+                document.getElementById('result2').style.color="green";
+                document.getElementById('result2').innerHTML="Valid User!"+User_name;
+            }
+            else{
+                 document.getElementById('result2').style.color="red";
+                 document.getElementById('result2').innerHTML="In-Valid User!"
+            }
+        }
+    </script>
+</head>
+<body>
+        <h1>Display the Even Number & sum</h1><br/>
+        <div id="result1"><script>sumofeven()</script></div>
+        <div id="formv">
+        <form>
+        <table align="center"  cellspacing="4px" cellpadding="5px">
+                <caption><h1>Login Page</h1></caption>
+                <tr>
+                    <td>User_name:</td>
+                    <td><input type="text" name="username" id="username"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" id="password"></td>
+                </tr>
+                <tr><td><div id="result2"></div></td></tr>
+             <tr><td><input type="button" value="Login" onclick="validateuser()"/></td></tr>
+        </table> 
+
+        </form>
+        </div>
+</body>
+</html>

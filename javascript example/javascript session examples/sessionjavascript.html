@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+        // variables
+        // var choice=parseInt(prompt("enter your choice"))
+        switch(choice){
+            case 1:var names=prompt("ENTER THE name of person")
+                   var rollno=parseInt(prompt("enter the usn"))
+                   alert("thanks for your time\nyour name is "+names+" usn "+rollno)
+                   var array=[1,2,3,4,45,5,6]
+                   console.log(typeof(array))
+                   var string=new Array("pru","prav","kir","khal","bhavani","jayanth","sachin")
+                   // accesing array elements
+                    console.log(array[0]+" "+string[0])
+                    // length
+                    console.log(array.length+" "+string.length)
+                    var i=0;
+                    // printing the array elements
+                    for(i=0;i<array.length;i++)
+                    {
+                    console.log(array[i]+" "+string[i])
+                    // printing in the html page
+                    document.write(array[i]+" "+string[i]+"<br/>")
+                    }
+                   break;
+            case 2:document.write("<h1>calculaor operation</h1> <br/>")
+                    var num1=parseInt(prompt("enter the number 1"))
+                    var num2=parseInt(prompt("enter the number 2"))
+                    // +,/,*,-,%,++,--
+                    // addtion of 2 numbers
+                    document.write("<ol>")
+                    document.write("<li>addtion of two number:"+(num1+num2)+"</li>")
+                    document.write("<li>subtraction two number:"+(num1-num2)+"</li>")
+                    document.write("<li>multiplication of two numbers:"+(num1*num2)+"</li>")
+                    document.write("<li>division of two numbers:"+(num1/num2)+"</li>")
+                    document.write("<li>mod of two munbers:"+(num1%num2)+"</li>")
+                    document.write("<li>increment:"+(num1++)+"</li>")
+                    document.write("<li>decrement:"+(num1--)+"</li>")
+                    document.write("</ol>")
+                    break;
+            case 3:var names=["pruthvi","praveen","kiran","khalandar","jayanth"]
+                   var marks=new Array()
+                    for(var i=0;i<names.length;i++){
+                     marks[i]=parseInt(prompt("Enter the Marks of student:"+names[i]))
+                    }
+                    var msg=""
+                    for(var i=0;i<names.length;i++){
+                    msg+=names[i]+" marks=>"+marks[i]+"\n"
+                    }
+                    alert(msg)
+                    break;
+            case 4:function add(num1,num2){
+                        return a+b
+                    }
+                    document.write("Function calls")
+                    var a=parseInt(prompt("enter the variable 1:"))
+                    var b=parseInt(prompt("enter the variable 2:"))
+                    console.log(add(a,b))  //prints in console
+                    document.write("named functions :"+add(a,b))
+                    break;
+            default:alert("enter valid option")
+         }
+
+    </script>
+</head>
+<body>
+        <h1>welcome to javascript tutorial</h1>
+        <h2>choose the option to learn concept:</h2>
+        <ol style="list-style-type:upper-roman;">
+            <li>variables</li>
+            <li>operators</li>
+            <li>loops</li>
+            <li>functions</li>
+        </ol>
+</body>
+</html>

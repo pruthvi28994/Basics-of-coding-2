@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sessionform_functions</title>
+    <style type="text/css">
+        input{ margin-bottom:10px;}
+        #button_captcha{ 
+                border-color: royalblue;
+        }
+        h1{
+            text-shadow: 2px 4px rgb(170, 106, 106);
+            text-align: center;
+            color: rgb(195, 228, 51);
+        }
+    </style>
+    <script>
+        function check_function(){
+            var fname=document.session_form_function.first_name.value;
+            var lname=document.session_form_function.last_name.value;
+            if(fname=='' || lname==''){
+                alert("all fields all mandatory");
+            }
+            else {
+                    alert(fname+" "+lname);
+                    var full_name=fname+" "+lname;
+                    document.session_form_function.full_name.value=full_name;
+            }
+
+        }
+        function change_color(){
+            var fncolor=document.getElementById("first_name").value;
+            var lncolor=document.session_form_function.last_name.value;
+            if(fncolor!=''){
+                document.getElementById("first_name").style.color="pink";
+            }
+            if(lncolor!=''){
+                document.session_form_function.last_name.style.color="pink";
+            }
+        }
+        function validate_usn(){
+            var usn=document.session_form_function.usn.value;
+            var regusn=/^[1][a-z||A-Z]{2}[0-9]{2}[a-z||A-Z]{2}[0-9]{3}$/
+            if(regusn.test(usn)){
+                alert("usn is valid")
+            }else{
+                alert("enter valid usn")
+            }
+        }
+        function check_captcha(){
+            var capital=document.getElementById('delhi');
+            var president=document.getElementById('Rajendra Prasad');
+
+            var c=document.session_form_function.capital.value;
+            var p=document.session_form_function.president.value;
+            var score=0;
+            if(c==''|| p=='')
+            {
+                alert("all fields are mandatory!!!!")
+            }
+            else{
+            if(capital.checked==true){
+                score++;
+            }
+            if(president.checked==true){
+                score++;
+            }
+            document.getElementById("result").innerHTML="your score="+score;
+            }
+    }
+    </script>
+
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <form name="session_form_function">
+        first_name:<input type="text" id="first_name" onblur="change_color()"/><br/>
+        last_name: <input type="text" name="last_name" onblur="change_color()"><br/>
+        Candiate_name:<input type="text" name="full_name"/><br/>
+        USN: <input type="text" id="usn" onblur="validate_usn()"/></BR>
+        <hr>
+        <b style="text-transform: uppercase;">captcha</b></br>
+        1.what is the capital of india ?<br/>
+        <input type="radio" name="capital" id="banglore" value="banglore">banglore<br/>
+        <input type="radio" name="capital" id="mumbai" value="mumbai">mumbai<br/>
+        <input type="radio" name="capital" id="delhi" value="delhi">delhi<br/>
+        <input type="radio" name="capital" id="punjab" value="punjab">punjab<br/>
+
+        2.who is the first president of india ?<br/>
+        <input type="radio" name="president" id="Rajendra Prasad" value="Rajendra prasad"/>Rajendra Prasad<br/>
+        <input type="radio" name="president" id="Indra Ghandhi" value="Indra Ghandhi"/>Indra Ghandhi<br/>
+        <input type="radio" name="president" id="jawaharlal neharu" value="jawaharlal neharu"/>jawaharlal neharu<br/>
+        <input type="radio" name="president" id="abdhul kalam" value="abdhul kalam"/>abdhul kalam<br/>
+        <div id="result" style="color: red;"></div>
+        <input type="button" id="button_captcha" value="check_captcha" onclick="check_captcha()"/><br/>
+        <hr>
+        <input type="button" value="check_name" onclick="check_function()"/>
+    </form>
+</body>
+</script>
+</html>

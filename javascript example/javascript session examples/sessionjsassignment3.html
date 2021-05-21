@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computation</title>
+    <script type="text/javascript">
+        var a
+        var sum=0;
+        function checkodd(oddnum){
+            if(oddnum%2!=0){
+                sum+=oddnum;
+            }
+        }
+        function Computeodd(){
+            var temp=parseInt(document.sumofodd.number.value);
+            while(temp>0){
+                a=temp%10;
+                checkodd(a)
+                temp=parseInt(temp/10);
+            }
+            document.getElementById('result').innerHTML="Sum of Odd Digits in number is "+sum;
+            sum=0;
+        }
+    </script>
+</head>
+<body>
+    <h1>Abacus Eduction Center ,Hydrabad</h1>
+    <h2>Sum of odd Digits</h2>
+    <form name="sumofodd">
+        <label for="Number">Number:
+            <input type="text" name="number" id="number"></label><br/>
+            <input type="button" value="Compute" onclick="Computeodd()"/>
+    </form>
+    <div id="result"></div>
+</body>
+</html>

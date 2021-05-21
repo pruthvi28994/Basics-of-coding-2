@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <div  style="font-size:larger">
+        <h1>Travel reservation form</h1>
+        
+        <form id="registration_form" method="POST">
+            Full name*:<br>
+            <input type="text" name="full_name" placeholder="FirstName LastName" autofocus="autofocus" value=""><br><br>
+            Email address*:<br>
+            <input type="text" name="email_addr" value=""><br><br>
+            Select Tour Package* :<br>
+            <select name="package">
+                <option value="Goa">Goa</option>
+                <option value="Kashmir" selected>Kashmir</option>
+                <option value="Rajasthan">Rajasthan</option>
+            </select><br><br>
+            Arrival date*:<br>
+            <input type="text" name="arv_dt" placeholder="m/d/y" value=""><br><br>
+            Number of persons*:<br>
+            <input type="text" name="persons" value="" ><br><br>
+            Boarding<input type="checkbox" name="facilities[]" value="boarding"><br>
+            Fooding<input type="checkbox" name="facilities[]" value="fooding"><br>
+            Sight seeing<input type="checkbox" name="facilities[]" value="sightseeing"><br><br>
+            <label>Discount Coupon code:</label><br>
+            <input type="text" name="dis_code" value=""><br><br>
+            <label>Terms and conditions*</label><br>
+            <input type="radio" name="tnc" value="agree" checked>I agree
+            <input type="radio" name="tnc" value="disagree">I disagree<br><br>
+            <input type="submit"  name="submit" value="Complete reservation" />
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+        <head><title>my first javascript example</title>
+            <script type="text/javascript">
+                function check_option(){
+                        var score=0;
+                        var president=document.myform.president.value;
+                        if(president==''){
+                            alert("choose the correct option")
+                        }
+                        else {
+                            //another mehtod to select the radio elemts using query selector
+                            //another by using normal class id
+                            if(document.querySelector('input[name="president"]:checked').value=='Rajendra prasad'){
+                            score++;
+                        }
+                        document.getElementById('result').innerHTML="your score :"+score;
+                    }
+                }
+            
+            </script>
+        </head>
+        <!-- external linking  <script src="exmple.js" -->
+    <body>
+        <form name="myform" action="">
+            <h2><b>Question 1:Who is the first president of india ?</b></h2>
+            <input type="radio" name="president" value="Indra Ghandhi">Indra Ghandhi<br/>
+            <input type="radio" name="president" value="Rajendra prasad">Rajendra Prasad<br/>
+            <input type="radio" name="president" value="jawaharlal neharu">jawaharlal neharu<br/>
+            <input type="radio" name="president" value="abdhul kalam">abdhul kalam<br/>
+            <hr>
+            <div id="result" style="color:red;"></div>
+            <input type="button" value="check" onclick="check_option()"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+  <head>
+     <title>myjavascript</title>
+  </head>
+ 
+ <body style="background-color:#00080;color:#ff6600;text-decoration:none">
+	<!-- <script src="C:\Users\pruth\OneDrive\Documents\javascriptoracle\javascipt.js"> -->
+	<!-- </script> -->
+	<!-- <h1>validating age</h1> -->
+	 <script type="text/javascript">
+		var age=prompt("enter your age","age");
+		if(age>18){
+			document.write("<b>eligible for voting</b></br>");
+		}else{
+			document.write("<b>not eligible for voting</b></br>");
+		}
+		var book=prompt("enter the book","enter the book");
+		if(book=="history"){
+				document.write("<b>you like History book</b></br>");
+			}else if(book=="science"){
+				document.write("<b>you like science book</b></br>");
+			}else if(book=="maths"){
+				document.write("<b>you like mathmatics book</b></br>");
+			}else {
+				document.write("<b>unknown book</b></br>");
+		}
+		var count=1;
+		while(count<=10)
+		 {
+			 document.write("2*"+count+"="+(2*count));
+			 document.write("</br>");
+			 count++;
+		}
+	 </script>
+	 <form action="">
+		<label for="firstname">Firstname:</label><input type="text" name="firstname" placeholder="enter your 1stname" required /><br/>
+		<label for="lasttname">lastname:</label><input type="text" name="lastname"  placeholder="enter your laststname" required /><br/>
+		<label for="email"> Email:</label><input type="email" name="email" placeholder="enter email" required /><br/>
+		<label for="password">Password:</label><input type="password" name="password" required /><br/>
+		<label for="confirmpassword">Confirmpassword:</label><input type="password" name="password" required /><br/>
+		<label for="mobilenumber">mobilenumber:</label><input type="number" name="mobilenumber" required /><br />
+		<label for="gender">gender </label><input type="radio" name="gender" value="male" required>male</input>
+											<input type="radio" name="gender" value="female" required>female</input>
+											<input type="radio" name="gender" value="others" required>others</input><br/>
+		<label for="country">country</label><select name="country" required><option value="-1">select country</option><option value="india">india</option>
+																   <option value="china">china</option>
+																   <option value="USA">USA</option>
+																   </select><br/>
+		<label for="dateofbirth">dateofbirth</label><input type="date" name="dateofbirth" value="dateofbirth" required /><br/>
+		<hr/>
+		<input type="submit" value="submit" />
+		 
+	 
+	 
+</body>
+</html>
+  
+  
